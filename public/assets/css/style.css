@@ -1,6 +1,17 @@
 html {
     background-color:  rgb(160, 113, 160);
  }
+.carousel .carousel-item {
+    width: 800px !important;
+    height: 300px;
+}
+
+/* .carousel-item {
+    width: 100%;
+    margin: 0 auto;
+    height: 600px;
+} */
+
  
 body {
     width: 75%;

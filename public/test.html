@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 
-	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script"
+	 rel="stylesheet">
 
-	 <!-- Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
 	<!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
 
 	<title>VoluntArea</title>
 </head>
 
 <body>
-    
-    <h1>VoluntArea</h1>
+
+	<div class="carousel">
+		<a class="carousel-item" href="#one!">
+			<img src= "./assets/css/images/volunteer1.png">
+		</a>
+		<a class="carousel-item">
+			<img src="./assets/css/images/volunteer2.jpg">
+		</a>
+		<a class="carousel-item">
+			<img src="./assets/css/images/volunteer3.jpg">
+		</a>
+	</div>
+
+
+	<!-- <h1>VoluntArea</h1> -->
 
 	{{{ body }}}
 
@@ -28,7 +48,23 @@
 				<a class="grey-text text-lighten-4 right" href="https://github.com/Jhint24/VoluntArea">Reference Work</a>
 			</div>
 		</div>
-    </footer>
-    
+	</footer>
+
 </body>
+
+
+<script>
+	$(document).ready(function () {
+		$('.carousel').carousel();
+	});
+// 	  $('.carousel-slider').carousel({
+//     fullWidth: true
+//   });
+
+  
+</script>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
 </html>
