@@ -1,0 +1,34 @@
+html {
+    background-color:  rgb(160, 113, 160);
+ }
+ 
+body {
+    width: 75%;
+    margin: 0 auto; 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: white;
+ } 
+ 
+.VoluntAreaFooter {
+     background-color: rgb(160, 113, 160);
+     padding: 20px 0;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+
+ }
+
+main {
+    flex: 1 0 auto;
+  }
+
+h1 {
+    text-align: center;
+    font-family: 'Alex Brush', cursive;
+    font-size: 65px;
+    margin: 50px;
+}
+    
