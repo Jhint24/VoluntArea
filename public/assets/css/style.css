@@ -1,3 +1,4 @@
+
 html {
     background-color:  rgb(160, 113, 160);
  }
@@ -13,33 +14,67 @@ html {
 } */
 
  
-body {
-    width: 75%;
-    margin: 0 auto; 
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: white;
- } 
- 
-.VoluntAreaFooter {
-     background-color: rgb(160, 113, 160);
-     padding: 20px 0;
-     position: fixed;
-     left: 0;
-     bottom: 0;
-     width: 100%;
 
- }
+body {
+   width: 75%;
+   margin: 0px auto; 
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+.page-footer{
+    position: fixed;
+    width: 75%;
+    bottom: 0;
+    
+}
+
+header {
+    height: 70px;
+}
+
+header,nav {
+    height: 100%;
+}
 
 main {
     flex: 1 0 auto;
-  }
+}
 
-h1 {
-    text-align: center;
-    font-family: 'Alex Brush', cursive;
-    font-size: 65px;
+main h1 {
+    font-weight: bold;
+}
+
+ main h2 {
+    font-weight: 300;
+}
+
+#logo-icon {
+   margin-left: 50px;
+   margin-top: 20px;
+   
+
+}
+
+#logo {
+    margin-left: 50px;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+#head-nav-links {
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.mainpanel{
+   margin: 50px;
+}
+
+#mainpanel-content {
     margin: 50px;
 }
-    

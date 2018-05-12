@@ -7,8 +7,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script"
 	 rel="stylesheet">
 
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
 	<!-- Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+	<!-- Font Awesome -->
+	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 
 	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
@@ -20,9 +27,31 @@
 	crossorigin="anonymous"></script>
 
 	<title>VoluntArea</title>
+
 </head>
 
 <body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper purple lighten-4">
+				<i class="fas fa-handshake fa-5x" id=logo-icon></i>
+
+				<a href="/" class="brand-logo" id="logo">VoluntArea</a>
+				<ul class="right hide-on-med-and-down" id="head-nav-links">
+					<li>
+						<a href="/survey">Survey</a>
+					</li>
+					<li>
+						<a href="/api/friends">...</a>
+					</li>
+					<li>
+						<a href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
 	<div class="carousel">
 		<a class="carousel-item" href="#one!">
@@ -39,18 +68,39 @@
 
 	<!-- <h1>VoluntArea</h1> -->
 
+
 	{{{ body }}}
 
-	<footer class="VoluntAreaFooter">
+	<footer class="page-footer purple lighten-4">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">VoluntArea App</h5>
+					<p class="grey-text text-lighten-4">We are a nonprofit, and your tax-deductible gift helps us connect good people with good causes.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li>
+							<a class="grey-text text-lighten-3" href="/api/friends">...</a>
+						</li>
+						<li>
+							<a class="grey-text text-lighten-3" href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div class="footer-copyright">
 			<div class="container">
-				<span class="grey-text text-lighten-4">© 2018 VoluntArea. All rights researved.</span>
+				© 2018 VoluntArea all rights researved.
 				<a class="grey-text text-lighten-4 right" href="https://github.com/Jhint24/VoluntArea">Reference Work</a>
 			</div>
 		</div>
 	</footer>
 
 </body>
+
 
 
 <script>
