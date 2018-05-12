@@ -7,17 +7,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script"
 	 rel="stylesheet">
 
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
 
 	<title>VoluntArea</title>
 </head>
@@ -26,7 +28,7 @@
 
 	<div class="carousel">
 		<a class="carousel-item" href="#one!">
-			<img src= "./assets/css/images/volunteer1.png">
+			<img src="./assets/css/images/volunteer1.jpg">
 		</a>
 		<a class="carousel-item">
 			<img src="./assets/css/images/volunteer2.jpg">
@@ -35,6 +37,26 @@
 			<img src="./assets/css/images/volunteer3.jpg">
 		</a>
 	</div>
+
+	<br>
+
+	  <!-- Dropdown Trigger -->
+	<div id "two-buttons" class="col s12 m7">
+			<div class="card horizontal">
+		<a class='dropdown-trigger btn' id="drop" href='#' data-target='dropdown1'>Who are you?<i class="material-icons right">arrow_drop_down</i></a>
+	
+	  <!-- Dropdown Structure -->
+	  <ul id='dropdown1' class='dropdown-content'>
+		<li><a href="#!">I am a volunteer</a></li>
+		<li class="divider" tabindex="-1"></li>
+		<li><a href="#!">I am an organization</a></li>
+	  </ul>
+	  <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
+			<i class="material-icons right">send</i>
+	</button>
+</div>
+</div>
+
 
 
 	<!-- <h1>VoluntArea</h1> -->
@@ -56,15 +78,16 @@
 <script>
 	$(document).ready(function () {
 		$('.carousel').carousel();
+		$('.dropdown-trigger').dropdown();
 	});
 // 	  $('.carousel-slider').carousel({
 //     fullWidth: true
 //   });
 
-  
+
 </script>
 
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 </html>
