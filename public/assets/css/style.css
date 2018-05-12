@@ -2,9 +2,10 @@
 html {
     background-color:  rgb(160, 113, 160);
  }
+
 .carousel .carousel-item {
-    width: 800px !important;
-    height: 300px;
+    width: 75% !important;
+    height: 300px !important;
 }
 
 /* .carousel-item {
@@ -29,9 +30,53 @@ h1{
 .page-footer{
     position: fixed;
     width: 75%;
-    bottom: 0;
+    margin: 0 auto; 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: white;
+ } 
+
+/* .btn {
+     width: 30% !important;
+     display:inline-block;
+     margin-left:auto;
+     margin-right:auto;
+     position: relative;
+ } */
+
+ #drop {
+    width: 30% !important;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: 1%;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%
+   
+ }
+ 
+ #submit {
+    width: 20% !important;
+    display: block;
+     margin-left: 0;
+     margin-right:  auto;
+     margin-top: 1%;
+     margin-bottom: 1%
+    
+ } 
+
+.VoluntAreaFooter {
+     background-color: rgb(160, 113, 160);
+     padding: 20px 0;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     bottom: 0;
     
 }
+
 
 header {
     height: 70px;
