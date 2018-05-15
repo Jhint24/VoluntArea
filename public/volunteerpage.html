@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script"
+        rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
+
+    <!-- Materialize CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+    <link rel="stylesheet" href="./org.css" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <title>VoluntArea</title>
+
+</head>
+
+<body>
+
+   
+        <header>
+                <nav>
+                    <div class="nav-wrapper #3949ab indigo darken-1">
+                        <i class="fas fa-hands-helping" id=logo-icon></i>
+                        
+        
+                        <a href="/" class="brand-logo" id="logo">VoluntArea</a>
+                        <ul class="right hide-on-med-and-down" id="head-nav-links">
+                            <li>
+                                <a href="/survey">Survey</a>
+                            </li>
+                            <li>
+                                <a href="/api/friends">...</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+  <br>
+  <br>
+
+
+    <!-- <h1>VoluntArea</h1> -->
+    <div calss="row">
+            <div class="input-field col s6">
+            <i class="fas fa-calendar-alt prefix"></i><label for="volunteerdate" class>Volunteer Date</label><input id=volunteerdate type="text" class="datepicker"></input>
+        <!-- <i class="fas fa-calendar-alt"></i> -->
+        </div>
+    </div>
+
+    <div class="row">
+            <form class="col s12">
+              <div class="row">
+                    <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Zip code</label>
+                          </div>
+              </div>
+            </form>
+          </div>
+
+    {{{ body }}}
+
+    <footer class="page-footer #5c6bc0 indigo lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">VoluntArea App</h5>
+                    <p class="grey-text text-lighten-4">We are a nonprofit, and your tax-deductible gift helps us connect good people with good causes.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="/api/friends">...</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+
+
+<script>
+    $(document).ready(function () {
+        // $('.carousel').carousel();
+        $('.dropdown-trigger').dropdown();
+        $('.datepicker').datepicker();
+        $('#select1, #myselect').material_select();
+    
+        $("#select1").on('change', function() {
+        $('#myselect').val("1");
+        $('#myselect').material_select();
+    });
+    });
+//    $('.carousel-slider').carousel({
+//     fullWidth: true
+//   });
+
+
+</script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+</html>

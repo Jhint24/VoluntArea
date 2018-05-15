@@ -61,10 +61,39 @@ main h1 {
 h2 {
 margin-top: 5px;
 }
+
+#drop {
+    width: 20% !important;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: 1%;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+ }
+
+ .dropdown-trigger {
+    width: 30% !important;
+    display:inline-block;
+    margin-left: 0 auto;
+    margin-right: 1%;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+ }
+ 
+ #submit {
+    width: 20% !important;
+    display: block;
+     margin-left: 0;
+     margin-right:  auto;
+     margin-top: 1%;
+     margin-bottom: 1%; 
+ } 
+
 #logo-icon {
    margin-left: 50px;
-   margin-bottom: 2px;
-
+  margin-bottom: 2px;
 }
 
 #logo {
@@ -78,7 +107,7 @@ margin-top: 5px;
     margin-right: 50px;
 }
 .divider{
-   padding-top: 130px;
+   margin-top: 130px;
 }
 
 .mainpanel{
@@ -86,7 +115,7 @@ margin-top: 5px;
 }
 .fly-in-text{
     font-family: 'Dancing Script', cursive;
-    color: aliceblue;
+    color: black;
 }
 
 #mainpanel-content {
