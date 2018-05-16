@@ -2,8 +2,15 @@ var orm = require("../config/orm.js");
 
 // create the code that will call the ORM functions
 var voluntareaModel = {
-    read: function(cb) {
-        orm.read("voluntarea_db", function(res)  {
+    readOrgs: function(cb) {
+        orm.read("orgs", function(res)  {
+            //one of the 3 cbs called
+            cb(res);
+        });
+    },
+    
+    readVols: function(cb) {
+        orm.read("vols", function(res)  {
             //one of the 3 cbs called
             cb(res);
         });
