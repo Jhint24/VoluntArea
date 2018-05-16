@@ -8,16 +8,21 @@
 	 rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
-	<!-- Materialize CSS -->
 
-	+
+	
+
+	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
 	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
@@ -36,8 +41,8 @@
 
 	<header>
 		<nav>
-			<div class="nav-wrapper purple lighten-5">
-				<i class="fas fa-handshake fa-5x" id=logo-icon></i>
+			<div class="nav-wrapper #3949ab indigo darken-1">
+                <i class="fas fa-hands-helping" id=logo-icon></i>
 
 				<a href="/" class="brand-logo" id="logo">VoluntArea</a>
 				<ul class="right hide-on-med-and-down" id="head-nav-links">
@@ -89,6 +94,7 @@
 		</main> -->
 
 	<div>
+	<div class="divider">
 		<div class="welcome-section content-hidden">
 			<div class="content-wrap">
 				<ul class="fly-in-text">
@@ -97,6 +103,23 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+
+		<div id "two-buttons" class="col s12 m7">
+			<div class="card horizontal">
+				<a class='dropdown-trigger btn #ff6e40 deep-orange accent-2'  id="drop" href='#'>Who are you?
+				</a>
+				<!-- Dropdown Structure -->
+				<select id="select1" data-target='dropdown1' class='dropdown-trigger btn #ff6e40 deep-orange accent-2'>
+						<option value="1">I am a volunteer</option>
+						<option value="2">I am an organization</option>
+					</select>
+				<button class="btn waves-effect waves-light #ff6e40 deep-orange accent-2" id="submit" type="submit" name="action">Submit
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+		</div>
+
 
 		<div class="divider"></div>
 
@@ -113,6 +136,7 @@
 			<button class="btn waves-effect deep-purple lighten-2" type="submit" name="action">I am an organization
 				<i class="material-icons right"></i>
 			</button>
+
 		</a>
 	</div>
 
@@ -183,14 +207,11 @@
 	<!-- </div> -->
 	
 
-
-
-
 	{{{ body }}}
 
 
 
-	<footer class="page-footer purple lighten-4">
+	<footer class="page-footer #5c6bc0 indigo lighten-1">
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">

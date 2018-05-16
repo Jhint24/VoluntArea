@@ -3,6 +3,30 @@ html {
     /* background-color:  rgb(160, 113, 160); */
     
  }
+
+.card { width:800px;
+    background-color: rgb(244, 239, 239);
+}
+
+
+
+
+@media only screen
+and (max-width : 480px) {
+.card { width:500px !important;}
+}
+
+
+@media only screen
+and (max-width : 767px) {
+.card { width:700px !important;}
+}
+
+.card-image {
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 20px;
+}
 .carousel .carousel-item {
     width: 800px !important;
     height: 300px;
@@ -61,10 +85,55 @@ main h1 {
 h2 {
 margin-top: 5px;
 }
+
+#drop {
+    width: 20% !important;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: 1%;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+ }
+
+ .dropdown-trigger {
+    width: 30% !important;
+    display:inline-block;
+    margin-left: 0 auto;
+    margin-right: 1%;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+ }
+
+ #sidebar {
+    float: left;
+    width: 20%;
+}
+
+#content-container {
+    float: right;
+    width: 80%;
+    margin: 20px;
+}  
+
+#bar-right {
+    float: left;
+    width: 50%;
+}
+ 
+ #submit {
+    width: 20% !important;
+    display: block;
+     margin-left: 0;
+     margin-right:  auto;
+     margin-top: 1%;
+     margin-bottom: 1%; 
+ } 
+
 #logo-icon {
    margin-left: 50px;
-   margin-bottom: 2px;
-
+  margin-bottom: 2px;
 }
 
 #logo {
@@ -80,6 +149,7 @@ margin-top: 5px;
 .divider{
    margin-top: 140px;
    margin-bottom: 20px;
+
 }
 
 .mainpanel{
@@ -88,6 +158,7 @@ margin-top: 5px;
 .fly-in-text{
     font-family: 'Dancing Script', cursive;
     color:black;
+
 }
 
 #mainpanel-content {
