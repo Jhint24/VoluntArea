@@ -8,23 +8,28 @@
 	 rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
-	<!-- Materialize CSS -->
 
-	+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	
+
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
 	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
 
 	<title>VoluntArea</title>
 
@@ -32,10 +37,12 @@
 
 <body>
 
+
+
 	<header>
 		<nav>
-			<div class="nav-wrapper purple lighten-4">
-				<i class="fas fa-handshake fa-5x" id=logo-icon></i>
+			<div class="nav-wrapper #3949ab indigo darken-1">
+                <i class="fas fa-hands-helping" id=logo-icon></i>
 
 				<a href="/" class="brand-logo" id="logo">VoluntArea</a>
 				<ul class="right hide-on-med-and-down" id="head-nav-links">
@@ -53,9 +60,11 @@
 		</nav>
 	</header>
 
+
+
 	<div class="carousel">
 		<a class="carousel-item" href="#one!">
-			<img src= "./assets/css/images/volunteer1.png">
+			<img src="./assets/css/images/volunteer1.png">
 		</a>
 		<a class="carousel-item">
 			<img src="./assets/css/images/volunteer2.jpg">
@@ -64,14 +73,66 @@
 			<img src="./assets/css/images/volunteer3.jpg">
 		</a>
 	</div>
+	<!-- <main>
+			<div class="container">
+				<div class="row">
+					<div class="col s12 z-depth-5 mainpanel">
+						<div id="mainpanel-content">
+							<h1 class="w3-container w3-center w3-animate-zoom">VoluntArea</h1>
+							<div class="divider"></div>
+							<h2>VoluntArea matches inspired people with inspiring causes. It’s how volunteers and nonprofits connect to achieve remarkable outcomes.</h2>
+							<h2>!</h2>
+							<a href="/survey">
+								<button class="btn waves-effect deep-purple lighten-2" type="submit" name="action">lets Start
+									<i class="material-icons right"></i>
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main> -->
 
+	<div>
+	<div class="divider">
+		<div class="welcome-section content-hidden">
+			<div class="content-wrap">
+				<ul class="fly-in-text">
+					<li>Volunt</li>
+					<li>Area</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-	<!-- <h1>VoluntArea</h1> -->
+		<div id "two-buttons" class="col s12 m7">
+			<div class="card horizontal">
+				<a class='dropdown-trigger btn #ff6e40 deep-orange accent-2'  id="drop" href='#'>Who are you?
+				</a>
+				<!-- Dropdown Structure -->
+				<select id="select1" data-target='dropdown1' class='dropdown-trigger btn #ff6e40 deep-orange accent-2'>
+						<option value="1">I am a volunteer</option>
+						<option value="2">I am an organization</option>
+					</select>
+				<button class="btn waves-effect waves-light #ff6e40 deep-orange accent-2" id="submit" type="submit" name="action">Submit
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+		</div>
+
+		<h2>VoluntArea matches inspired people with inspiring causes. It’s how volunteers and nonprofits connect to achieve remarkable
+			outcomes.</h2>
+		<h2></h2>
+		<a href="/survey">
+		</a>
+	</div>
 
 
 	{{{ body }}}
 
-	<footer class="page-footer purple lighten-4">
+
+
+	<footer class="page-footer #5c6bc0 indigo lighten-1">
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">
@@ -101,20 +162,29 @@
 
 </body>
 
-
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 
 <script>
 	$(document).ready(function () {
-		$('.carousel').carousel();
-	});
-// 	  $('.carousel-slider').carousel({
-//     fullWidth: true
-//   });
 
-  
+		$('.carousel').carousel();
+
+
+		var welcomeSection = $(' .welcome-section');
+		setTimeout (function () {
+			console.log("hi");
+			welcomeSection.removeClass('content-hidden');
+			console.log(welcomeSection);
+		}, 500);
+		
+		
+
+
+	});
+
 </script>
 
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 </html>
