@@ -3,6 +3,30 @@ html {
     /* background-color:  rgb(160, 113, 160); */
     
  }
+
+.card { width:800px;
+    background-color: rgb(244, 239, 239);
+}
+
+
+
+
+@media only screen
+and (max-width : 480px) {
+.card { width:500px !important;}
+}
+
+
+@media only screen
+and (max-width : 767px) {
+.card { width:700px !important;}
+}
+
+.card-image {
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 20px;
+}
 .carousel .carousel-item {
     width: 800px !important;
     height: 300px;
@@ -81,6 +105,22 @@ margin-top: 5px;
     margin-top: 1%;
     margin-bottom: 1%;
  }
+
+ #sidebar {
+    float: left;
+    width: 20%;
+}
+
+#content-container {
+    float: right;
+    width: 80%;
+    margin: 20px;
+}  
+
+#bar-right {
+    float: left;
+    width: 50%;
+}
  
  #submit {
     width: 20% !important;
