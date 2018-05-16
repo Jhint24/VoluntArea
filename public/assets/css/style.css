@@ -78,7 +78,8 @@ margin-top: 5px;
     margin-right: 50px;
 }
 .divider{
-   padding-top: 130px;
+   margin-top: 140px;
+   margin-bottom: 20px;
 }
 
 .mainpanel{
@@ -86,7 +87,7 @@ margin-top: 5px;
 }
 .fly-in-text{
     font-family: 'Dancing Script', cursive;
-    color: aliceblue;
+    color:black;
 }
 
 #mainpanel-content {
