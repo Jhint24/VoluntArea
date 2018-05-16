@@ -5,7 +5,7 @@ var voluntareaModel = require("../models/voluntarea.js");
 
 //create routes and set the logic
 //org route to show all current orgs
-router.get("/orgs", function(req, res)  {
+router.get("/events", function(req, res)  {
     //3 of 3 cbs
     voluntareaModel.readOrgs(function(data)  {
         var hbsObject = {
@@ -36,3 +36,4 @@ router.get("/orgs", function(req, res)  {
 // router.post("/api/vols", function(req, res) {
 //     voluntareaModel.create("vols")
 // })
+module.exports = router;

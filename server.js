@@ -4,7 +4,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var methodOverride = require('method-override')
-// var path = require("path");
+var path = require("path");
+var routes = require("./controllers/controllers.js");
 
 
 
@@ -29,7 +30,7 @@ app.set('view engine', 'handlebars');
 
 // Import routes and give the server access to them.
 // var routes = require("./controllers/controller.js");
-// app.use(routes);
+app.use(routes);
 
 app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
