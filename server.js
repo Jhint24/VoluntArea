@@ -17,6 +17,9 @@ app.use(express.static(process.cwd() + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//location of  views folder
+app.use('/static', express.static(path.join(__dirname, '/views')));
+
 // Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
 
