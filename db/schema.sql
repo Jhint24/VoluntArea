@@ -7,7 +7,7 @@ CREATE TABLE vols (
     id int not null auto_increment,
     vol_name varchar (45) not null,
     vol_email varchar (45) not null,
-    vol_area varchar (45) not null,
+    vol_zip varchar (45) not null,
     primary key (id)
 );
 
@@ -16,9 +16,9 @@ CREATE TABLE orgs (
     org_name varchar (45) not null,
     org_activity varchar (45) not null,
     org_url varchar (255) not null,
-    org_date date (15) not null,
-    org_time time (15) not null,
-    org_hours (15) int not null,
-    vols_needed (250) int not null,
+    org_date date not null,
+    org_time time (6) not null,
+    org_hours int (3) not null,
+    org_vols int (250) not null,
     primary key (id)
 );
