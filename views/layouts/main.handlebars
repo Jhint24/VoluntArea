@@ -10,114 +10,34 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
     <!-- Materialize CSS -->
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+    <!-- Compiled and minified JavaScript -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    
 
     <title>VoluntArea</title>
 
 </head>
 
 <body>
+{{> header }}
 
 
-    <header>
-        <nav>
-            <div class="nav-wrapper #3949ab indigo darken-1">
-                <i class="fas fa-hands-helping" id=logo-icon></i>
 
+{{{ body }}}
 
-                <a href="/" class="brand-logo" id="logo">VoluntArea</a>
-                <ul class="right hide-on-med-and-down" id="head-nav-links">
-                    <li>
-                        <a href="/survey">Survey</a>
-                    </li>
-                    <li>
-                        <a href="/api/friends">...</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <br>
-    <br>
-    <br>
-
-
-    <!-- <h1>VoluntArea</h1> -->
-    <div calss="row">
-        <div class="input-field col s6">
-            <i class="fas fa-calendar-alt prefix"></i>
-            <label for="volunteerdate" class>Volunteer Date</label>
-            <input id=volunteerdate type="text" class="datepicker"></input>
-            <!-- <i class="fas fa-calendar-alt"></i> -->
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s6">
-            <div class="card">
-
-                <div "sidebar" id="content-container">
-                    <img class="activator" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:60px">
-                    <br>
-                    anfsbdio;aw dfjiodfasio m jioasdjfo asmf jiofjdoip kohlkan fnknkflanla nklnk kln kalnskl vnkld nkl nkl ndvklasnklnklsnvkl nklnlkvds kasnklvnaklsdnvkl sadkl nknaklvs
-            </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4" id="displayDate" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:200px">May 30, 2018
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-    
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-               
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    {{{ body }}}
-
-    <footer class="page-footer #5c6bc0 indigo lighten-1">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">VoluntArea App</h5>
-                    <p class="grey-text text-lighten-4">We are a nonprofit, and your tax-deductible gift helps us connect good people with good causes.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="/api/friends">...</a>
-                        </li>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+{{> footer }}
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-  	<script src="/assets/js/volJS.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+    <script src="/assets/js/volJS.js"></script>	
+
 </body>
 </html>

@@ -8,7 +8,12 @@ $(document).ready(function () {
         $('#myselect').val("1");
         $('#myselect').material_select();
     });
+    $('.carousel').carousel();
+    
+    var welcomeSection = $(' .welcome-section');
+    setTimeout (function () {
+        console.log("hi");
+        welcomeSection.removeClass('content-hidden');
+        console.log(welcomeSection);
+    }, 500);
 });
-//    $('.carousel-slider').carousel({
-//     fullWidth: true
-//   });
