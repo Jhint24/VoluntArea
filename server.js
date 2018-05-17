@@ -23,9 +23,12 @@ app.use(bodyParser.json());
 app.use('/static', express.static(path.join(__dirname, '/views')));
 // Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
+app.use(express.static("public"));
 
 // Set Handlebars as the view engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({ defaultLayout: 'main',
+partialsDir: __dirname + "/views/partials"
+ }));
 app.set('view engine', 'handlebars');
 
 // Import routes and give the server access to them.
