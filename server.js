@@ -3,6 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
+var handleBars = require("handlebars");
 var methodOverride = require('method-override')
 var path = require("path");
 var routes = require("./controllers/controllers.js");
@@ -20,7 +21,6 @@ app.use(bodyParser.json());
 
 //location of  views folder
 app.use('/static', express.static(path.join(__dirname, '/views')));
-
 // Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
 
