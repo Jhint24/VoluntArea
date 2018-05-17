@@ -15,6 +15,20 @@ router.get("/events", function(req, res)  {
         res.render("index", hbsObject);
     });
 });
+
+router.get("/organization", function(req, res)  {
+    
+    voluntareaModel.readOrgs(function(data)  {
+        var hbsObject = {
+            orgs: data
+        };
+        console.log(hbsObject);
+        res.render("organization", hbsObject);
+    });
+});
+
+
+
 //GET THE ABOVE WORKING FIRST
 
 // //org routes specific to its id

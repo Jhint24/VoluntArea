@@ -7,8 +7,6 @@ var methodOverride = require('method-override')
 var path = require("path");
 var routes = require("./controllers/controllers.js");
 
-
-
 // Express App
 var app = express();
 var PORT = process.env.PORT || 3000;

@@ -62,8 +62,9 @@ header {
     position:fixed;
     width: 75%;
     /* height: 70px; */
+    margin-bottom: 40px;
     
-    top :0 
+    top :0 ;
 }
 
 header,nav {
