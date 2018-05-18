@@ -53,6 +53,31 @@ router.get("/orgs/:id", function(req, res)  {
     });
 });
 
+router.post("/api/orgs", function(req, res) {
+    orgs.create([
+        "org_name",
+        "org_activity",
+        "org_url",
+        "org_date",
+        "org_time",
+        "org_hours",
+        "org_vols"
+    ], [
+      req.body.name, 
+      req.body.web , 
+      req.body.activity,
+      req.body.date, 
+      req.body.time,
+      req.body.vol,
+      req.body.hours
+      
+    ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+  });
+
+
 // //post to the db
 // router.post("/api/vols", function(req, res) {
 //     voluntareaModel.create("vols")
