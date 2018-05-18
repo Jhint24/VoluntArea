@@ -1,7 +1,9 @@
 var express = require("express");
 var router = express.Router();
+var exphbs  = require('express-handlebars');
 //Import the model
 var voluntareaModel = require("../models/voluntarea.js");
+var Handlebars = require('handlebars')
 
 //create routes and set the logic
 //org route to show all current orgs
@@ -31,6 +33,25 @@ router.get("/events", function(req, res)  {
     });
 });
 //GET THE ABOVE WORKING FIRST
+
+var app = express();
+
+        var hbs = exphbs.create({
+            // Specify helpers which are only registered on this instance.
+            helpers: {
+                splice: function (){
+                    var spliceDate = '';
+                    for (var i = 0; i < org_date.length; ++i) {
+                    spliceDate = org_date[i].slice(3,8);
+                    console.log(spliceDate);
+                }
+
+                }
+            }
+        
+        });
+
+
 
 // //org routes specific to its id
 // router.get("/orgs/:id", function(req, res)  {
