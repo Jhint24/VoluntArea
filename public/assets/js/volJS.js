@@ -1,25 +1,28 @@
-$(document).ready(function () {
+     $(document).ready(function () {
 
-    $('.carousel').carousel();
-    var $input
-    //var picker 
+        //for the main carousel image
+        $('.carousel').carousel();
 
-    $('.datepicker').datepicker();
-    var picker = $('.datepicker').val();
-    //console.log(picker)
+        //for the calendar to pop up and select date
+        $('.datepicker').datepicker();
+        var date = $('.datepicker').val();
 
 
-    function getdate() {
-        var picker = $('.datepicker').val();
-        console.log(picker)
+        var welcomeSection = $(' .welcome-section');
+        setTimeout(function () {
+            console.log("hi");
+            welcomeSection.removeClass('content-hidden');
+            console.log(welcomeSection);
+        }, 500);
 
-    }
 
-    var welcomeSection = $(' .welcome-section');
-    setTimeout(function () {
-        console.log("hi");
-        welcomeSection.removeClass('content-hidden');
-        console.log(welcomeSection);
-    }, 500);
+    });
 
-});
+    //this selects the value that we can compare to database date
+    $("#getDate").click(function () {
+        // action goes here!!
+        var date = $('.datepicker').val();
+        console.log(date)
+    });
+
+
