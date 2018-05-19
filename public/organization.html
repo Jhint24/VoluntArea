@@ -2,240 +2,253 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script"
-	 rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Arizonia|Calligraffitti|Dynalight|Fredericka+the+Great|Italianno|Lovers+Quarrel|Petit+Formal+Script|Pinyon+Script"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous|Tangerine" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-	
-
-	<!-- Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-	<!-- Font Awesome -->
-	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 
-	<!-- Font Awesome -->
-	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
-	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous"></script>
 
-	<title>Organization</title>
+    <!-- Materialize CSS -->
+
+    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>Organization</title>
 
 </head>
+
 <body>
 
 
-	<header>
-            <nav>
-                <div class="nav-wrapper #3949ab indigo darken-1">
-                    <i class="fas fa-hands-helping" id=logo-icon></i>
-    
-                    <a href="/" class="brand-logo" id="logo">VoluntArea</a>
-                    <ul class="right hide-on-med-and-down" id="head-nav-links">
+    <header>
+        <nav>
+            <div class="nav-wrapper #3949ab indigo darken-1">
+                <i class="fas fa-hands-helping" id=logo-icon></i>
+
+                <a href="/" class="brand-logo" id="logo">VoluntArea</a>
+                <ul class="right hide-on-med-and-down" id="head-nav-links">
+                    <li>
+                        <a href="/survey">...</a>
+                    </li>
+                    <li>
+                        <a href="/api/friends">...</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    {{{ body }}}
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix userName" type="text" class="validate">
+                <label for="icon_prefix">Full Name</label>
+            </div>
+
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">web</i>
+                <input id="email webAddress" type="email" class="validate">
+                <label for="email">Web-address</label>
+            </div>
+
+            <!-- <form class="col s12"> -->
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea id="icon_prefix2 activity" class="materialize-textarea"></textarea>
+                <label for="icon_prefix2">Activity</label>
+            </div>
+            <!-- </form> -->
+
+
+            <div class="input-field col s6">
+                <i class="fas fa-calendar-alt prefix"></i>
+                <label for="volunteerdate" class>Date</label>
+                <input id=volunteerdate type="text" class="datepicker"></input>
+            </div>
+
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">schedule</i>
+                <label for="volunteertime" class>Time</label>
+                <input type="text" id=volunteertime class="timepicker"></input>
+
+            </div>
+
+
+
+            <div class="input-field col s6">
+                <form action="#">
+                    <label for="email">Volunteers needed</label>
+                    <p class="range-field">
+                        <input type="range" id="test5 volNeeded" min="0" max="100" />
+                    </p>
+
+                </form>
+            </div>
+
+            <div class="input-field col s6">
+                <form action="#">
+                    <label for="email">Event hours</label>
+                    <p class="range-field">
+                        <input type="range" id="test5 eventHours" min="0" max="50" />
+                    </p>
+
+                </form>
+            </div>
+
+            <button class="btn waves-effect waves-light" id="submitButton" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <footer class="page-footer #5c6bc0 indigo lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">VoluntArea App</h5>
+                    <p class="grey-text text-lighten-4">We are a nonprofit, and your tax-deductible gift helps us connect good people with good causes.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
                         <li>
-                            <a href="/survey">...</a>
+                            <a class="grey-text text-lighten-3" href="/api/friends">...</a>
                         </li>
                         <li>
-                            <a href="/api/friends">...</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
+                            <a class="grey-text text-lighten-3" href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </header>
-
-    {{{ body }}}
-    
-    
-     <div class="container">  
-            <div class="row">   
-                
-                        <div class="input-field col s6">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="icon_prefix userName" type="text" class="validate">
-                                <label for="icon_prefix">Full Name</label>
-                        </div>           
-
-                
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">web</i>
-                            <input id="email webAddress" type="email" class="validate">
-                            <label for="email">Web-address</label>
-                        </div>              
-
-                <!-- <form class="col s12"> -->
-                
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="icon_prefix2 activity" class="materialize-textarea"></textarea>
-                            <label for="icon_prefix2">Activity</label>
-                        </div>            
-                <!-- </form> -->
-
-                
-                    <div class="input-field col s6">                        
-                        <i class="fas fa-calendar-alt prefix"></i>
-                        <label for="volunteerdate" class>Date</label>
-                        <input id=volunteerdate type="text" class="datepicker"></input>                
-                    </div>              
-
-               
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">schedule</i>                        
-                        <label for="volunteertime" class>Time</label>
-                        <input type="text" id=volunteertime class="timepicker"></input>
-                                                    
-                    </div>
-                
-
-                
-                    <div class="input-field col s6">
-                        <form action="#">
-                            <label for="email">Volunteers needed</label>
-                            <p class="range-field">
-                            <input type="range" id="test5 volNeeded" min="0" max="100" />
-                            </p>
-                            
-                        </form>
-                    </div>
-
-                   <div class="input-field col s6">
-                        <form action="#">
-                            <label for="email">Event hours</label>
-                            <p class="range-field">
-                                <input type="range" id="test5 eventHours" min="0" max="50" />
-                            </p>
-                            
-                        </form>
-                    </div>
-
-              
-
-            
-</div>
-        </div> 
-    
-   
-
-
-	<footer class="page-footer #5c6bc0 indigo lighten-1">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">VoluntArea App</h5>
-					<p class="grey-text text-lighten-4">We are a nonprofit, and your tax-deductible gift helps us connect good people with good causes.</p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Links</h5>
-					<ul>
-						<li>
-							<a class="grey-text text-lighten-3" href="/api/friends">...</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="https://github.com/Jhint24/VoluntArea">GitHub Repo</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2018 VoluntArea all rights researved.
-				<a class="grey-text text-lighten-4 right" href="https://github.com/Jhint24/VoluntArea">Reference Work</a>
-			</div>
-		</div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 VoluntArea all rights researved.
+                <a class="grey-text text-lighten-4 right" href="https://github.com/Jhint24/VoluntArea">Reference Work</a>
+            </div>
+        </div>
     </footer>
-    
+
 
     <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Thank you! 
-                    <br>
-                    We have got your information!</h4>
-                <div class="divider"></div>
-                <h5 id="userMatch"></h5>
-                <img id="userMatchImage" class="materialboxed" width="650" src="">
-            </div>
+        <div class="modal-content">
+            <h4>Thank you!
+                <br> We have got your information!</h4>
+            <div class="divider"></div>
+            <h5 id="userMatch"></h5>
+            <img id="userMatchImage" class="materialboxed" width="650" src="">
+        </div>
     </div>
-    
-        <script type="text/javascript">
-            
-    $(document).ready(function () {
-        $('.timepicker').pickatime({
-    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-    twelvehour: false, // Use AM/PM or 24-hour format
-    donetext: 'OK', // text for done-button
-    cleartext: 'Clear', // text for clear-button
-    canceltext: 'Cancel', // Text for cancel-button
-    autoclose: false, // automatic close timepicker
-    ampmclickable: true, // make AM PM clickable
-    aftershow: function(){} //Function for after opening timepicker
-  });
-        $('select').material_select();
-        $('.modal').modal();
-        $('.dropdown-trigger').dropdown();
-        $('.datepicker').datepicker();
-        $('#select1, #myselect').material_select();
-        $("#select1").on('change', function () {
-            $('#myselect').val("1");
-            $('#myselect').material_select();
-        });
-    });
 
-    
-                //Activate submit button
-                $('#submitButton').on('click', function(event) {
-                event.preventDefault();
-                       // Gather user inputs
-                var userInput = {
-                    name: $('#userName').val().trim(),
-                    web: $('#webAddress').val().trim(),
-                    activity:('#activity').val().trim(),
-                    date:('#volunteerdate').val().trim(),
-                    time:('#volunteertime').val().trim(), 
-                    vol:('#volNeeded').val().trim(),         
-                    hours:$('#eventHours').val().trim()
-                };
-                 console.log(JSON.stringify(userInput));
 
-                  // Add user inputs to orgs table
 
-                     $.post('/api/orgs', userInput)
-                  .done(function(data) {
-                      console.log('JSON.stringify(data)');
-                      
-            //     
-                    
-                    // Pop open the modal dialog
-                      $('#modal1').modal('open');
-                  });
-                
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.timepicker').pickatime({
+                default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+                fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+                twelvehour: false, // Use AM/PM or 24-hour format
+                donetext: 'OK', // text for done-button
+                cleartext: 'Clear', // text for clear-button
+                canceltext: 'Cancel', // Text for cancel-button
+                autoclose: false, // automatic close timepicker
+                ampmclickable: true, // make AM PM clickable
+                aftershow: function () { } //Function for after opening timepicker
             });
+            $('select').material_select();
+            $('.modal').modal();
+            $('.dropdown-trigger').dropdown();
+            $('.datepicker').datepicker();
+            $('#select1, #myselect').material_select();
+            $("#select1").on('change', function () {
+                $('#myselect').val("1");
+                $('#myselect').material_select();
+            });
+        });
 
 
-               
+        //Activate submit button
+        $('#submitButton').on('click', function (event) {
+            event.preventDefault();
+            // Gather user inputs
+            var userInput = {
+                name: $('#userName').val().trim(),
+                web: $('#webAddress').val().trim(),
+                activity: ('#activity').val().trim(),
+                date: ('#volunteerdate').val().trim(),
+                time: ('#volunteertime').val().trim(),
+                vol: ('#volNeeded').val().trim(),
+                hours: $('#eventHours').val().trim()
+            };
+            console.log(JSON.stringify(userInput));
 
-        </script>
+            // Add user inputs to orgs table
 
-        <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+            $.post('/api/orgs', userInput)
+                .done(function (data) {
+                    console.log('JSON.stringify(data)');
+
+                    //     
+
+                    // Pop open the modal dialog
+                    $('#modal1').modal('open');
+                });
+
+        });
+
+
+
+
+    </script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 
 
 </body>
+
 </html>
