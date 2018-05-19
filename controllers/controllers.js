@@ -62,14 +62,15 @@ router.get("/orgs/:id", function(req, res)  {
 
 
 router.post("/api/orgs", function(req, res) {
-    orgs.create([
-        "org_name",
-        "org_activity",
-        "org_url",
+   console.log("route hit");
+   voluntareaModel.create([
+        'org_name',
+        'org_activity',
+        'org_url',
         "org_date",
         "org_time",
-        "org_hours",
-        "org_vols"
+        'org_hours',
+        'org_vols'
     ], [
       req.body.name, 
       req.body.web , 
@@ -81,8 +82,9 @@ router.post("/api/orgs", function(req, res) {
       
     ], function(result) {
       // Send back the ID of the new quote
-      res.json({ id: result.insertId });
+      console.log("callback hit", result);
     });
+    res.send("it worked");
   });
 
 

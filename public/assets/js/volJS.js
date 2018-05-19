@@ -50,15 +50,15 @@ $(document).ready(function(){
                 // Gather user inputs
         var userInput = {
             name: $('#userName').val(),//.trim() of undefined !!!
-            web: $('#webAddress').val(),
-            activity:$('#activity').val(),
+            web: $('.webAddress').val(),
+            activity:$('.activity').val(),
             date:$('#volunteerdate').val(),
             time:$('#volunteertime').val(), 
-            vol:$('#volNeeded').val(),         
-            hours:$('#eventHours').val()
+            vol:$('.volNeeded').val(),         
+            hours:$('.eventHours').val()
             
         };
-        // console.log(JSON.stringify(userInput));
+        console.log(JSON.stringify(userInput));
             // Add user inputs to orgs table
 
                 $.post('/api/orgs', userInput)

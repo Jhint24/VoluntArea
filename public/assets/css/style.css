@@ -4,6 +4,14 @@ html {
     
  }
 
+ .icon-block {
+    padding: 0 10px;
+    display: inline-block;
+  }
+.icon-block .material-icons {
+    font-size: inherit;
+  }
+
 .card { width:800px;
     background-color: rgb(244, 239, 239);
 }
