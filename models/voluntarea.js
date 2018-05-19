@@ -17,7 +17,7 @@ var voluntareaModel = {
     },
 
     create: function(cols, vals, cb)    {
-        orm.create("voluntarea_db", cols, vals, function(res)  {
+        orm.create("orgs", cols, vals, function(res)  {
             cb(res);
         });
     },

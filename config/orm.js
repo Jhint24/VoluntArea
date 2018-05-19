@@ -15,9 +15,14 @@ var orm = {
     
     },
     create: function(table, cols, vals, cb)   {
-        var queryString = "INSERT INTO ?? SET ?? = ?";
+        console.log(cols);
+        console.log(vals);
+        var queryString = "INSERT INTO ?? (??) VALUES (?)";
         connection.query(queryString, [table, cols, vals], function(err, result) {
-            if (err) throw err;
+            if (err) {
+             console.log(this.sql);
+             console.log(err);   
+            };
             console.log(result);
             cb(result);
         });
