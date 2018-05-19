@@ -22,4 +22,13 @@ $(document).ready(function () {
         console.log(welcomeSection);
     }, 500);
 
+
+        $("#getDate").click(function () {
+    // action goes here!!
+    var date = $('.datepicker').val();
+    console.log(date)
+
+
+});
+
 });
