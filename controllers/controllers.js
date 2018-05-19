@@ -15,16 +15,21 @@ var voluntareaModel = require("../models/voluntarea.js");
     }
     res.render("index", hbsObject1);
   });
-//org route to show all current orgs
-router.get("/events", function(req, res)  {
+
+    //org route to show all current orgs
+    router.get("/events", function(req, res)  {
     //3 of 3 cbs
     voluntareaModel.readOrgs(function(data)  {
-        var hbsObject2 = {
-            orgs: data
-        };
-        //console.log(hbsObject2);
-        res.render("events", hbsObject2);
+        voluntareaModel.readDatesOfOrgs(function()  {
+            var hbsObject3 = {
+                orgs: data
+            };
+            console.log(hbsObject3);
+            res.render("events", hbsObject3);
+        });
     });
+    
+
 });
 
 router.get("/orgs", function(req, res)  {

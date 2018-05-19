@@ -8,6 +8,12 @@ var voluntareaModel = {
             cb(res);
         });
     },
+
+    readDatesOfOrgs: function(cb)   {
+        orm.readOrgsDate(function(res)  {
+            cb(res);
+        });
+    },
     
     readVols: function(cb) {
         orm.read("vols", function(res)  {
