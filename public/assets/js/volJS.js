@@ -61,17 +61,23 @@ $(document).ready(function(){
         console.log(JSON.stringify(userInput));
             // Add user inputs to orgs table
 
-                $.post('/api/orgs', userInput)
-            .done(function(data) {
-                console.log('JSON.stringify(data)');
-                
-    //     
+            //     $.post('/api/orgs', userInput)
+            // .done(function(data) {
+            //     console.log('JSON.stringify(data)');
+
+            $.ajax("/api/orgs/",    {
+                type: "POST",
+                data: userInput
+            }).then( function(data) {
+                console.log(userInput.name, userInput.web, userInput.activity, userInput.date, userInput.time, userInput.hours);
+                location.reload();
+            })
             
             // Pop open the modal dialog
                 $('#modal1').modal('open');
             });
 
-        });
+
 
 $('.timepicker').timepicker({
     default: 'now', // Set default time: 'now', '1:30AM', '16:30'

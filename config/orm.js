@@ -39,6 +39,20 @@ var orm = {
         });
     },
 
+    createDateChange: function(cb)   {
+        var queryString = "INSERT INTO orgs (org_date) VALUES(STR_TO_DATE(org_date,'%c/%e/%y'));";
+        connection.query(queryString, function(err, result) {
+
+            if (err) {
+             console.log(this.sql);
+             console.log(err);   
+            };
+            console.log("This is create " + result);
+
+            cb(result);
+        });
+    },
+
     update: function(table, objColVals, condition, cb)   {
         var queryString = "UPDATE ?? SET ? WHERE ?";
         connection.query(queryString, [table, objColVals, condition], function(err, result) {

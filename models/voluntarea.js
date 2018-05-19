@@ -27,6 +27,11 @@ var voluntareaModel = {
             cb(res);
         });
     },
+    DateChangecreate: function(cb)    {
+        orm.createDateChange(function(res)  {
+            cb(res);
+        });
+    },
 
     update: function(objColVals, condition, cb) {
         orm.update("voluntarea_db", objColVals, condition, function(res)   {
