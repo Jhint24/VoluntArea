@@ -1,10 +1,3 @@
-var express = require("express");
-var router = express.Router();
-var exphbs  = require('express-handlebars');
-//Import the model
-var voluntareaModel = require("../models/voluntarea.js");
-var Handlebars = require('handlebars')
-
 //create routes and set the logic
 //org route to show all current orgs
 var express = require("express");
@@ -32,7 +25,34 @@ router.get("/events", function(req, res)  {
         res.render("events", hbsObject2);
     });
 });
+
+router.get("/organization", function(req, res)  {
+    //3 of 3 cbs
+    voluntareaModel.readOrgs(function(data)  {
+        var hbsObject2 = {
+            orgs: data
+        };
+        //console.log(hbsObject2);
+        res.render("organization", hbsObject2);
+    });
+});
 //GET THE ABOVE WORKING FIRST
+
+
+//org routes specific to its id
+router.get("/orgs/:id", function(req, res)  {
+    var condition = {
+        id: req.params.id
+    };
+    console.log("condition: ",condition);
+    voluntareaModel.read(condition, function(data)  {
+        var hbsObject = {
+            orgs: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+    });
+});
 
 var app = express();
 
