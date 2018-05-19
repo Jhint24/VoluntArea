@@ -60,7 +60,16 @@
 
     {{{ body }}}
     
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
      <div class="container">  
             <div class="row">   
                 
@@ -91,9 +100,9 @@
                         <i class="fas fa-calendar-alt prefix"></i>
                         <label for="volunteerdate" class>Date</label>
                         <input id=volunteerdate type="text" class="datepicker"></input>                
-                    </div>              
-
-               
+                    </div>   
+                   
+                                                  
                     <div class="input-field col s6">
                         <i class="material-icons prefix">schedule</i>                        
                         <label for="volunteertime" class>Time</label>
@@ -122,6 +131,10 @@
                             
                         </form>
                     </div>
+
+                    <button class="btn waves-effect waves-light" id="submitButton" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                    </button>
 
               
 
@@ -201,6 +214,7 @@
                 //Activate submit button
                 $('#submitButton').on('click', function(event) {
                 event.preventDefault();
+                console.log('hi!')
                        // Gather user inputs
                 var userInput = {
                     name: $('#userName').val().trim(),

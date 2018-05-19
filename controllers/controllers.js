@@ -54,6 +54,8 @@ router.get("/orgs/:id", function(req, res)  {
 });
 
 router.post("/api/orgs", function(req, res) {
+    console.log(JSON.stringify(req.body));
+    
     orgs.create([
         "org_name",
         "org_activity",
@@ -70,7 +72,7 @@ router.post("/api/orgs", function(req, res) {
       req.body.time,
       req.body.vol,
       req.body.hours
-      
+
     ], function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
