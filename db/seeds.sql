@@ -14,5 +14,5 @@ INSERT INTO orgs (org_name, org_activity, org_url, org_date, org_time, org_hours
 VALUES('United Blood Services', 'Blood Donation', 'www.ubs.com', '2018-06-15', '0900', 9, 25);
 
 INSERT INTO orgs (org_name, org_activity, org_url, org_date, org_time, org_hours, org_vols) 
-VALUES('The Humane Society', 'Pet Adotion', 'www.humaneaz.com', '2018-07-31', '0700', 7, 50);
+VALUES('The Humane Society', 'Pet Adoption', 'www.humaneaz.com', '2018-07-31', '0700', 7, 50);
 
