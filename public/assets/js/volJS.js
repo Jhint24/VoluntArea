@@ -1,13 +1,16 @@
 $(document).ready(function(){
-    $('.timepicker').timepicker();
+    $('.timepicker').timepicker({
+        twelveHour: false, // Use AM/PM or 24-hour format
+    });
 
 
 
     $('.carousel').carousel();
-    var $input
-    //var picker 
+  
 
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
     var picker = $('.datepicker').val();
     //console.log(picker)
 
@@ -46,14 +49,13 @@ $(document).ready(function(){
         event.preventDefault();
         console.log(JSON.stringify("hi or whatever"));
 
-
                 // Gather user inputs
         var userInput = {
             name: $('#userName').val(),//.trim() of undefined !!!
             web: $('.webAddress').val(),
             activity:$('.activity').val(),
             date:$('#volunteerdate').val(),
-            time:$('#volunteertime').val(), 
+            time:$('#volunteertime').val() + ":00", 
             vol:$('.volNeeded').val(),         
             hours:$('.eventHours').val()
             
@@ -72,18 +74,6 @@ $(document).ready(function(){
             });
 
         });
-
-$('.timepicker').timepicker({
-    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-    twelvehour: false, // Use AM/PM or 24-hour format
-    donetext: 'OK', // text for done-button
-    cleartext: 'Clear', // text for clear-button
-    canceltext: 'Cancel', // Text for cancel-button
-    autoclose: false, // automatic close timepicker
-    ampmclickable: true, // make AM PM clickable
-    aftershow: function(){} //Function for after opening timepicker
-    });
 
 
 
