@@ -3,6 +3,7 @@
 var express = require("express");
 var router = express.Router();
 var exphbs = require('express-handlebars');
+var moment = require('moment')
 //Import the model
 var voluntareaModel = require("../models/voluntarea.js");
 
@@ -19,9 +20,23 @@ var voluntareaModel = require("../models/voluntarea.js");
 router.get("/events", function(req, res)  {
     //3 of 3 cbs
     voluntareaModel.readOrgs(function(data)  {
+    var spliceDate = '';
+
+    for (var i=0; i<data.length; i++) {
+    spliceDate = data[i].org_date;
+    var date = moment(spliceDate);
+    var dateComponent = date.utc().format('ll');
+    data.org_date = dateComponent
+    console.log(dateComponent);
+    
+    
+
         var hbsObject2 = {
             orgs: data
+            //orgs: data
+            //orgs: dateComponent
         };
+    }
         //console.log(hbsObject2);
         res.render("events", hbsObject2);
     });
@@ -80,23 +95,6 @@ router.post("/api/orgs", function(req, res) {
     });
   });
 
-
-var app = express();
-
-        var hbs = exphbs.create({
-            // Specify helpers which are only registered on this instance.
-            helpers: {
-                splice: function (){
-                    var spliceDate = '';
-                    for (var i = 0; i < org_date.length; ++i) {
-                    spliceDate = org_date[i].slice(3,8);
-                    console.log(spliceDate);
-                }
-
-                }
-            }
-        
-        });
 
 
 

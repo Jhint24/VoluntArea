@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('.timepicker').timepicker();
 
 
@@ -26,63 +26,89 @@ $(document).ready(function(){
     }, 500);
 
 
-        $("#getDate").click(function () {
-    // action goes here!!
-    var date = $('.datepicker').val();
-    console.log(date)
+    $("#getDate").click(function () {
+        // action goes here!!
+        var date = $('.datepicker').val();
+        console.log(date)
 
 
-});
+        var result = [""];
+        result = $('.eventDate').data('myval')
+        console.log(result);
+        
+
+
+       //console.log(result.push($('.eventDate').text())); 
+    
+    
+
+
+        //console.log(result)
+
+        function splice () {
+            for (var i = 0; i < result.length; i++) {
+                spliceDate = result[i].slice(3,15);
+                console.log(spliceDate);
+            }
+        };
+
+        splice();
 
     
+        //var result = result.text()
+
+
+    });
+
+
     $("#select1").on('change', function () {
         $('#myselect').val("1");
         $('#myselect').material_select();
     });
 
 
-//Activate submit button
-        $('#submitButton').on('click', function(event) {
+    //Activate submit button
+    $('#submitButton').on('click', function (event) {
         event.preventDefault();
         console.log(JSON.stringify("hi or whatever"));
 
 
-                // Gather user inputs
+        // Gather user inputs
         var userInput = {
             name: $('#userName').val(),//.trim() of undefined !!!
             web: $('#webAddress').val(),
-            activity:$('#activity').val(),
-            date:$('#volunteerdate').val(),
-            time:$('#volunteertime').val(), 
-            vol:$('#volNeeded').val(),         
-            hours:$('#eventHours').val()
-            
+            activity: $('#activity').val(),
+            date: $('#volunteerdate').val(),
+            time: $('#volunteertime').val(),
+            vol: $('#volNeeded').val(),
+            hours: $('#eventHours').val()
+
         };
         // console.log(JSON.stringify(userInput));
-            // Add user inputs to orgs table
+        // Add user inputs to orgs table
 
-                $.post('/api/orgs', userInput)
-            .done(function(data) {
+        $.post('/api/orgs', userInput)
+            .done(function (data) {
                 console.log('JSON.stringify(data)');
-                
-    //     
-            
-            // Pop open the modal dialog
+
+                //     
+
+                // Pop open the modal dialog
                 $('#modal1').modal('open');
             });
 
-        });
+    });
 
-$('.timepicker').timepicker({
-    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-    twelvehour: false, // Use AM/PM or 24-hour format
-    donetext: 'OK', // text for done-button
-    cleartext: 'Clear', // text for clear-button
-    canceltext: 'Cancel', // Text for cancel-button
-    autoclose: false, // automatic close timepicker
-    ampmclickable: true, // make AM PM clickable
-    aftershow: function(){} //Function for after opening timepicker
+    $('.timepicker').timepicker({
+        default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+        fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+        twelvehour: false, // Use AM/PM or 24-hour format
+        donetext: 'OK', // text for done-button
+        cleartext: 'Clear', // text for clear-button
+        canceltext: 'Cancel', // Text for cancel-button
+        autoclose: false, // automatic close timepicker
+        ampmclickable: true, // make AM PM clickable
+        aftershow: function () { } //Function for after opening timepicker
     });
 
 
