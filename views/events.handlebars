@@ -1,33 +1,73 @@
+
 {{>header}}
 
 <div>
-    <br>
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
 
 {{>calender}}
 
-    <!-- Uses built-in `if` helper. -->
-  {{#if showTitle}}
-    <h1>Home</h1>
-  {{/if}}
+<!-- Uses built-in `if` helper. -->
+{{#if showTitle}}
+<h1>Home</h1>
+{{/if}}
 
-    <!-- Calls `splice` helper, overridden at render-level. -->
-    <p>{{splice}}</p>
+<!-- Calls `splice` helper, overridden at render-level. -->
+<p>{{splice}}</p>
 
 
-<div class=“col s6”>
-      {{#each orgs}}
-            {{!-- <form action=“/burgers/:id” method=“PUT” from the controllers file> --}}
-            <form action=“/events/{{this.org_date}}{{spliceDate}}?_method=PUT” method=“POST”>              
-              <card type=“card” class=‘eventDate’> {{this.org_date}}{{spliceDate}}</card>
-              
-            </form>
-          </div>
-      {{/each}}
+<div class="row">
+  {{#each orgs}}
+</div>
+<div class="col s6">
+
+  <div class="card">
+
+    <div "sidebar" id="content-container">
+      <img class="activator" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:60px">
+      <br>
+      <form action=“/events/{{this.org_activity}}?_method=PUT” method=“POST”>
+        <card type=“card” class=‘eventDate’> {{this.org_activity}}</card>
     </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4" id="displayDate" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png"
+        style="width:200px">
+        {{!--
+        <form action=“/burgers/:id” method=“PUT” from the controllers file> --}}
+          <form action=“/events/{{this.org_date}}?_method=PUT” method=“POST”>
+            <card type=“card” class=‘eventDate’> {{this.org_date}}</card>
+
+            <i class="material-icons right">more_vert</i>
+      </span>
+      <p>
+        <a href="#">This is a link</a>
+      </p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title
+        <i class="material-icons right">close</i>
+      </span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+
+    </div>
+
+    {{/each}}
+
+  </div>
+
+</div>
+</div>
+</div>
+
+</form>
+
+
+
+</div>
+
 
 
 {{>footer}}
