@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // // $('.carousel').carousel();
     // $('.dropdown-trigger').dropdown();
     // $('.datepicker').datepicker();
     // $('#select1, #myselect').material_select();
