@@ -75,6 +75,33 @@ $(document).ready(function(){
 
         });
 
+        //Activate submit button
+        $('#submitButton2').on('click', function(event) {
+            event.preventDefault();
+            console.log(JSON.stringify("HEYYYOYOYO"));
+    
+                    // Gather user inputs
+            var userInput = {
+                zip: $('#zipCode').val(),//.trim() of undefined !!!
+                name: $('#userName2').val(),
+                email:$('#emailAddress').val(),
+                
+            };
+            console.log(JSON.stringify(userInput));
+                // Add user inputs to orgs table
+    
+                    $.post('/api/vols', userInput)
+                .done(function(data) {
+                    console.log('JSON.stringify(data)');
+                    
+        //     
+                
+                // Pop open the modal dialog
+                    $('#modal1').modal('open');
+                });
+    
+            });
+
 
 
     $('.modal').modal();
