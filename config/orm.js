@@ -8,17 +8,26 @@ var orm = {
         var queryString = "SELECT * FROM ??";
         connection.query(queryString, [tableInput], function(err, result)   {
             if (err) throw err;
-            console.log(result)
+            console.log("This is read " + result)
             //one of the 3 cbs called
             cb(result);
         });
     
     },
+    readOrgsDate: function(cb)  {
+        var queryString = "SELECT date_format(org_date, '%b %d, %Y') FROM orgs";
+        connection.query(queryString, function(err, result)   {
+            if (err) throw err;
+            console.log("This is read Orgs Date " + result)
+            //one of the 3 cbs called
+            cb(result);
+        });
+    },
     create: function(table, cols, vals, cb)   {
         var queryString = "INSERT INTO ?? SET ?? = ?";
         connection.query(queryString, [table, cols, vals], function(err, result) {
             if (err) throw err;
-            console.log(result);
+            console.log("This is create " + result);
             cb(result);
         });
     },
@@ -27,7 +36,7 @@ var orm = {
         var queryString = "UPDATE ?? SET ? WHERE ?";
         connection.query(queryString, [table, objColVals, condition], function(err, result) {
             if (err) throw err;
-            console.log(result);
+            console.log("This is update " + result);
             cb(result);
         });
     }
