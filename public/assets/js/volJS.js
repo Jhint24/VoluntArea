@@ -23,6 +23,17 @@
         // action goes here!!
         var date = $('.datepicker').val();
         console.log(date)
+
+        function splice() {
+            var spliceDate = "";
+            for (var i = 0; i < eventDate.length; ++i) {
+                spliceDate = eventDate[i].slice(3, 8);
+                console.log(spliceDate);
+            }
+    
+        };
     });
+
+ 
 
 
