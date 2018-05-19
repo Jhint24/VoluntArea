@@ -44,19 +44,21 @@ $(document).ready(function(){
 //Activate submit button
         $('#submitButton').on('click', function(event) {
         event.preventDefault();
-    
+        console.log(JSON.stringify("hi or whatever"));
+
+
                 // Gather user inputs
         var userInput = {
-            name: $('#userName').val().trim(),
-            web: $('#webAddress').val().trim(),
-            activity:('#activity').val().trim(),
-            date:('#volunteerdate').val().trim(),
-            time:('#volunteertime').val().trim(), 
-            vol:('#volNeeded').val().trim(),         
-            hours:$('#eventHours').val().trim()
+            name: $('#userName').val(),//.trim() of undefined !!!
+            web: $('#webAddress').val(),
+            activity:$('#activity').val(),
+            date:$('#volunteerdate').val(),
+            time:$('#volunteertime').val(), 
+            vol:$('#volNeeded').val(),         
+            hours:$('#eventHours').val()
+            
         };
-            console.log(JSON.stringify(userInput));
-
+        // console.log(JSON.stringify(userInput));
             // Add user inputs to orgs table
 
                 $.post('/api/orgs', userInput)
