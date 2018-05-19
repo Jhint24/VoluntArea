@@ -16,3 +16,4 @@ VALUES('United Blood Services', 'Blood Donation', 'www.unitedbloodservices.org',
 INSERT INTO orgs (org_name, org_activity, org_url, org_date, org_time, org_hours, org_vols) 
 VALUES('Arizona Humane Society', 'Pet Adoption', 'www.azhumane.org', '2018-07-31', '0700', 7, 50);
 
+
