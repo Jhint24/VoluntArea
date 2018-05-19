@@ -28,12 +28,12 @@
                 <div "sidebar" id="content-container">
                     <img class="activator" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:60px">
                     <br>
-                    anfsbdio;aw dfjiodfasio m jioasdjfo asmf jiofjdoip kohlkan fnknkflanla nklnk kln kalnskl vnkld nkl nkl ndvklasnklnklsnvkl nklnlkvds kasnklvnaklsdnvkl sadkl nknaklvs
+                  <form action=“/events/{{this.org_activity}}?_method=PUT” method=“POST”>                 <card type=“card” class=‘eventDate’> {{this.org_activity}}</card>
             </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4" id="displayDate" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:200px">   
             {{!-- <form action=“/burgers/:id” method=“PUT” from the controllers file> --}}
-            <form action=“/events/{{this.org_date}}{{spliceDate}}?_method=PUT” method=“POST”>                 <card type=“card” class=‘eventDate’> {{this.org_date}}{{spliceDate}}</card>
+            <form action=“/events/{{this.org_date}}?_method=PUT” method=“POST”>                 <card type=“card” class=‘eventDate’> {{this.org_date}}</card>
 
                         <i class="material-icons right">more_vert</i>
                     </span>
