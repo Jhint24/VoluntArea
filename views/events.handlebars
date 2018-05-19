@@ -1,5 +1,33 @@
 {{>header}}
 
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
 {{>calender}}
+
+    <!-- Uses built-in `if` helper. -->
+  {{#if showTitle}}
+    <h1>Home</h1>
+  {{/if}}
+
+    <!-- Calls `splice` helper, overridden at render-level. -->
+    <p>{{splice}}</p>
+
+
+<div class=“col s6”>
+      {{#each orgs}}
+            {{!-- <form action=“/burgers/:id” method=“PUT” from the controllers file> --}}
+            <form action=“/events/{{this.org_date}}{{spliceDate}}?_method=PUT” method=“POST”>              
+              <card type=“card” class=‘eventDate’> {{this.org_date}}{{spliceDate}}</card>
+              
+            </form>
+          </div>
+      {{/each}}
+    </div>
+
 
 {{>footer}}

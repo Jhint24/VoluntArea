@@ -38,6 +38,7 @@ router.get("/organization", function(req, res)  {
 });
 //GET THE ABOVE WORKING FIRST
 
+
 //org routes specific to its id
 router.get("/orgs/:id", function(req, res)  {
     var condition = {
@@ -52,6 +53,40 @@ router.get("/orgs/:id", function(req, res)  {
         res.render("index", hbsObject);
     });
 });
+
+var app = express();
+
+        var hbs = exphbs.create({
+            // Specify helpers which are only registered on this instance.
+            helpers: {
+                splice: function (){
+                    var spliceDate = '';
+                    for (var i = 0; i < org_date.length; ++i) {
+                    spliceDate = org_date[i].slice(3,8);
+                    console.log(spliceDate);
+                }
+
+                }
+            }
+        
+        });
+
+
+
+// //org routes specific to its id
+// router.get("/orgs/:id", function(req, res)  {
+//     var condition = {
+//         id: req.params.id
+//     };
+//     console.log("condition: ",condition);
+//     voluntareaModel.read(condition, function(data)  {
+//         var hbsObject = {
+//             orgs: data
+//         };
+//         console.log(hbsObject);
+//         res.render("index", hbsObject);
+//     });
+// });
 
 // //post to the db
 // router.post("/api/vols", function(req, res) {
