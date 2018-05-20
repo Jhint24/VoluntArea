@@ -7,7 +7,10 @@ $(document).ready(function () {
     var $input
     //var picker 
 
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
+
     var picker = $('.datepicker').val();
     //console.log(picker)
 
@@ -30,13 +33,42 @@ $(document).ready(function () {
         // action goes here!!
         var date = $('.datepicker').val();
         console.log(date)
-
-
         var result = [""];
-        result = $('.eventDate').data('myval')
-        console.log(result);
-        
+        // Array = $('.eventDate').data('myval')
+        // console.log(Array)
+        //for (var i=0; i< ('myval').length; i++) {
 
+        result = $('.eventDate').text();
+        var p = 0 
+        var final = []
+        var temp = []
+        var j = 0
+        for( var i = 0; i<(result.length +1); i++){
+             if(i % 10 == 0) {
+                p = 0
+                final[j] = temp.join("")
+                console.log(final[j])                                                                  
+                //console.log(j)
+                j = j + 1 
+                
+             }
+             temp[p] = result[i]
+             p = p + 1
+
+            //console.log(temp)
+        
+        }
+
+        for (var i=0; i < final.length; i++) {
+            console.log( $(".card").find("[data-myVal]"));
+            if (String(date) != String(final[i])) {
+                $('#cardDiv'+ (i)).hide();
+
+                      }   
+            else {
+                //console.log("match")
+            }
+        }
 
        //console.log(result.push($('.eventDate').text())); 
     
@@ -45,14 +77,14 @@ $(document).ready(function () {
 
         //console.log(result)
 
-        function splice () {
-            for (var i = 0; i < result.length; i++) {
-                spliceDate = result[i].slice(3,15);
-                console.log(spliceDate);
-            }
-        };
+        // function splice () {
+        //     for (var i = 0; i < result.length; i++) {
+        //         spliceDate = result[i].slice(3,15);
+        //         console.log(spliceDate);
+        //     }
+        // };
 
-        splice();
+        // splice();
 
     
         //var result = result.text()

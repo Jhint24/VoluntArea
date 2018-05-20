@@ -17,7 +17,7 @@
 <div class="col s6">
   {{#each orgs}}
   <div class="row">
-    <div class="card">
+    <div class="card" id="cardDiv{{this.id}}">
 
       <div "sidebar" id="content-container">      
         <img class="activator" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:60px">
@@ -31,7 +31,7 @@
           {{!--
           <form action=“/burgers/:id” method=“PUT” from the controllers file> --}}
             <form action=“/events/{{this.org_date}}?_method=PUT” method=“POST”>
-              <div class="eventDate" id="dateDiv" data-myval={{this.id}}>{{this.org_date}}</div>
+              <div class="eventDate" id="dateDiv" data-thisVal={{this.id}}>{{this.org_date}}</div>
               
 
               <i class="material-icons right">more_vert</i>
