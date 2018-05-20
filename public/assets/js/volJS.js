@@ -104,6 +104,9 @@ $(document).ready(function () {
 
 
                 // Pop open the modal dialog
+                //https://materializecss.com/modals.html
+                // https://stackoverflow.com/questions/29764242/how-to-detect-materialized-js-modal-closing-event
+
                 $('#modal1').modal('open');
             });
 
