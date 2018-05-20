@@ -4,14 +4,35 @@ html {
     
  }
 
+ h1 , h3{
+    font-size: 2rem;
+}
+h2 {
+    font-size: 3rem;
+}
+.who{
+background-image: url("./images/stripes.png");
+width: 100%;
+}
+.round-image {
+    margin-top: 30px
+}
+
  .icon-block {
-    padding: 0 10px;
+    /* padding: 0 20px; */
     display: inline-block;
+    line-height: 1.2;
+    /* margin: 0 px; */
+
   }
 .icon-block .material-icons {
     font-size: inherit;
+   
   }
-
+ .button { 
+    background-color: #FAE1DF;
+    color:#5C415D;
+} */
 .card { width:800px;
     background-color: rgb(244, 239, 239);
 }
@@ -61,22 +82,21 @@ body {
 
 .page-footer{
     /* position: fixed; */
-    /* width: ; */
     bottom: 0;
+    background-color: #B3DEC1;
     
 }
 
 header {
     position:fixed;
-    width: 75%;
-    /* height: 70px; */
-    
+    width: 75%;       
     top :0 
+    
 }
 
-header,nav {
-    /* height: 100%; */
-    z-index: 1
+header,nav {    
+    z-index: 1;
+    background-color: #5C415D;
 }
 
 main {
@@ -139,7 +159,7 @@ margin-left: 30px;
     width: 50%;
 }
  
- #submit {
+#submit {
     width: 20% !important;
     display: block;
      margin-left: 0;
@@ -163,10 +183,14 @@ margin-left: 30px;
 #head-nav-links {
     margin-right: 50px;
 }
-.divider{
-   margin-top: 140px;
+.one{
+   margin-top: 150px;
    margin-bottom: 20px;
 
+}
+.divider{
+    margin-bottom: 20px;
+    margin-top: 20px; 
 }
 
 .mainpanel{
