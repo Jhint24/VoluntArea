@@ -28,6 +28,12 @@ var voluntareaModel = {
         });
     },
 
+    createVols: function(cols, vals, cb)    {
+        orm.create("vols", cols, vals, function(res)  {
+            cb(res);
+        });
+    },
+
     update: function(objColVals, condition, cb) {
         orm.update("voluntarea_db", objColVals, condition, function(res)   {
             cb(res);

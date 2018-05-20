@@ -87,6 +87,23 @@ router.post("/api/orgs", function(req, res) {
     res.send("it worked");
   });
 
+  router.post("/api/vols", function(req, res) {
+    console.log("VOLSSSSSS!!");
+    voluntareaModel.createVols([
+         'vol_name',
+         'vol_email',
+         'vol_zip'
+     ], [
+       req.body.name, 
+       req.body.email, 
+       req.body.zip,
+       
+     ], function(result) {
+       // Send back the ID of the new quote
+       console.log("callback hit", result);
+     });
+     res.send("it worked");
+   });
 
 var app = express();
 
