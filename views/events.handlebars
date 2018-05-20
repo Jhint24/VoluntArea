@@ -1,5 +1,4 @@
-
-{{>header}}
+ {{>header}}
 
 <div>
   <br>
@@ -15,75 +14,74 @@
 <h1>Home</h1>
 {{/if}}
 
-<!-- Calls `splice` helper, overridden at render-level. -->
-<p>{{splice}}</p>
-
-
-<div class="row">
-  {{#each orgs}}
-</div>
 <div class="col s6">
+  {{#each orgs}}
+  <div class="row">
+    <div class="card" id="cardDiv{{this.id}}">
 
-  <div class="card">
+      <div "sidebar" id="content-container">
+        <img class="activator" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:60px">
+        <br>
+        <form action=“/events/{{this.org_name}}{{this.org_activity}}?_method=PUT” method=“POST”>
+          <div class=‘eventActivity>
+            <br>{{this.org_name}}
+            <div></div>{{this.org_activity}}</div>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4" id="displayDate" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png"
+          style="width:200px">
 
-    <div "sidebar" id="content-container">
-      <img class="activator" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png" style="width:60px">
-      <br>
-      <form action=“/events/{{this.org_activity}}?_method=PUT” method=“POST”>
-        <card type=“card” class=‘eventDate’> {{this.org_activity}}</card>
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4" id="displayDate" src="http://web.alsa.org/images/content/pagebuilder/volunteer413887.png"
-        style="width:200px">
-        {{!--
-        <form action=“/burgers/:id” method=“PUT” from the controllers file> --}}
+          <br>
           <form action=“/events/{{this.org_date}}?_method=PUT” method=“POST”>
-            <card type=“card” class=‘eventDate’> {{this.org_date}}</card>
+            <div class="eventDate" id="dateDiv" data-thisVal={{this.id}}>{{this.org_date}}</div>
+            <br>
 
             <i class="material-icons right">more_vert</i>
-      </span>
-      <p>
-        <a href="#">This is a link</a>
-      </p>
+        </span>
+        <p>
+          <a href="#">This is a link</a>
+        </p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title
+          <i class="material-icons right">close</i>
+        </span>
+
+
+        <!-- HTML Form -->
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col s2">
+              <input type="text" class="form-control col s6" placeholder="Zip Code" id="zipCode" type="text" class="validate">
+            </div>
+
+            <div class="col s4">
+              <input type="text" class="form-control col s6" placeholder="First Name" id="userName2" type="text" class="validate">
+            </div>
+
+            <div class="col s6">
+              <input type="text" class="form-control col s6" placeholder="Email" id="emailAddress" type="text" class="validate">
+            </div>
+
+          </div>
+        </div>
+
+        <button class="btn waves-effect waves-light" id="submitButton2" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+
+        <p></p>
+
+
+
+      </div>
+
     </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Sign in for the event
-        <i class="material-icons right">close</i>
-
-
-      </span>
-
-
-               <!-- HTML Form -->
-			<div class="container-fluid">		
-			<div class="row">
-			
-			<div class="col s2">
-			<input type="text" class="form-control col s6" placeholder="Zip Code" id="zipCode" type="text" class="validate">
-			</div>
-			
-			<div class="col s4">
-			<input type="text" class="form-control col s6" placeholder="First Name" id="userName2" type="text" class="validate">
-			</div>
-			
-			<div class="col s6">
-			<input type="text" class="form-control col s6" placeholder="Email" id="emailAddress" type="text" class="validate">
-			</div>
-			
-			</div>
-			</div>
-
-      <button class="btn waves-effect waves-light" id="submitButton2" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-      </button>
-   
-      <p></p>
-
-    </div>
-
-    {{/each}}
-
   </div>
+  {{/each}}
+
+
 
 </div>
 </div>
