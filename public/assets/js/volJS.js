@@ -55,15 +55,15 @@ $(document).ready(function () {
             p = p + 1
 
         }
-        
         //to filter the events matching selected date
         for (var i = 0; i < final.length; i++) {
-            console.log($(".card").find("[data-myVal]"));
+            //console.log($(".card").find("[data-myVal]"));
             if (String(date) != String(final[i])) {
                 $('#cardDiv' + (i)).hide();
 
             }
             else {
+                $('#cardDiv' + (i)).show();
                 //console.log("match")
             }
         }
@@ -82,7 +82,7 @@ $(document).ready(function () {
     //Activate submit button
     $('#submitButton').on('click', function (event) {
         event.preventDefault();
-        console.log(JSON.stringify("hi or whatever"));
+        //console.log(JSON.stringify("hi or whatever"));
 
         // Gather user inputs
         var userInput = {
@@ -102,7 +102,6 @@ $(document).ready(function () {
             .done(function (data) {
                 console.log('JSON.stringify(data)');
 
-                //     
 
                 // Pop open the modal dialog
                 $('#modal1').modal('open');
@@ -111,15 +110,19 @@ $(document).ready(function () {
     });
 
     //Activate submit button
-    $('#submitButton2').on('click', function (event) {
+    $('.submitButton').on('click', function (event) {
+
         event.preventDefault();
-        console.log(JSON.stringify("HEYYYOYOYO"));
+        var id = $(this).attr("data-id")
+        console.log(id)
+        //console.log(JSON.stringify("HEYYYOYOYO"));
+        //console.log($(this).parent());
 
         // Gather user inputs
         var userInput = {
-            zip: $('#zipCode').val(),//.trim() of undefined !!!
-            name: $('#userName2').val(),
-            email: $('#emailAddress').val(),
+            zip: $('#zipCode' + id).val(),//.trim() of undefined !!!
+            name: $('#userName2' + id).val(),
+            email: $('#emailAddress' + id).val(),
 
         };
         console.log(JSON.stringify(userInput));
@@ -127,12 +130,13 @@ $(document).ready(function () {
 
         $.post('/api/vols', userInput)
             .done(function (data) {
-                console.log('JSON.stringify(data)');
+                //console.log('JSON.stringify(data)');
+                console.log(data)
 
                 //     
 
                 // Pop open the modal dialog
-                $('#modal1').modal('open');
+                $('#modal2').modal('open');
             });
 
     });
