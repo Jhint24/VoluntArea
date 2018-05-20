@@ -3,7 +3,15 @@ html {
     /* background-color:  rgb(160, 113, 160); */
     
  }
-
+h1 , h3{
+    font-size: 2rem;
+}
+h2 {
+    font-size: 3rem;
+}
+.round-image {
+    margin-top: 30px
+}
  .icon-block {
     padding: 0 10px;
     display: inline-block;
@@ -12,12 +20,10 @@ html {
     font-size: inherit;
   }
 
+
 .card { width:800px;
     background-color: rgb(244, 239, 239);
 }
-
-
-
 
 @media only screen
 and (max-width : 480px) {
@@ -61,21 +67,17 @@ body {
 
 .page-footer{
     /* position: fixed; */
-    /* width: ; */
     bottom: 0;
     
 }
 
 header {
     position:fixed;
-    width: 75%;
-    /* height: 70px; */
-    
+    width: 75%;    
     top :0 
 }
 
-header,nav {
-    /* height: 100%; */
+header,nav {   
     z-index: 1
 }
 
@@ -83,7 +85,7 @@ main {
     flex: 1 0 auto;
 }
 
-main h1 {
+/* main h1 {
     font-weight: bold;
 }
 
@@ -92,7 +94,7 @@ main h1 {
 }
 h2 {
 margin-top: 5px;
-}
+} */
 
 #drop {
     width: 20% !important;
@@ -163,17 +165,16 @@ margin-top: 5px;
 .mainpanel{
    margin: 20px;
 }
-.fly-in-text{
-    font-family: 'Dancing Script', cursive;
-    color:black;
-
-}
 
 #mainpanel-content {
     /* margin: 20px; */
 }
 
 /*------------Start Animation title style--------------*/
+.fly-in-text{
+    font-family: 'Dancing Script', cursive;
+    color:black;
+}
 
 .welcome-section {
     /* position: absolute; */
