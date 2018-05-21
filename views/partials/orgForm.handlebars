@@ -1,4 +1,5 @@
 
+
     <div class="parallax-container">
       <div class="parallax"><img src="./assets/css/images/world-map1.PNG"></div>
       <div class="row center-text">
@@ -7,13 +8,13 @@
     </div>
     <div class="section white">
       <div class="row container">
-
+                <h3 id="error-message" style="text-align:center; font-size:15px; font-weight:bold; color:red"></h3>
 
 
             <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="userName" type="text" class="validate">
-                <label for="icon_prefix">Full Name</label>
+                <input id="userName" type="text" class="validate" maxlength="50">
+                <label for="icon_prefix">Organization Name</label>
             </div>
 
             <div class="input-field col s6">
@@ -24,7 +25,7 @@
         
             <div class="input-field col s6">
                 <i class="material-icons prefix">mode_edit</i>
-                <textarea id="icon_prefix2 activity" class="activity materialize-textarea"></textarea>
+                <textarea id="icon_prefix2 activity" class="activity materialize-textarea" maxlength="50"></textarea>
                 <label for="icon_prefix2">Activity</label>
             </div>         
 
@@ -49,7 +50,7 @@
                 <form action="#">
                     <label for="email">Volunteers needed</label>
                     <p class="range-field">
-                        <input type="range" class="volNeeded" id="test5" min="0" max="100" />
+                        <input type="range" class="volNeeded" id="test5" min="0" max="1000" />
                     </p>
 
                 </form>
@@ -59,7 +60,7 @@
                 <form action="#">
                     <label for="email">Event hours</label>
                     <p class="range-field">
-                        <input type="range" class="eventHours" id="test5" min="0" max="50" />
+                        <input type="range" class="eventHours" id="test5" min="0" max="72" />
                     </p>
 
                 </form>
