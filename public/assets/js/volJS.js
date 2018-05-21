@@ -139,7 +139,7 @@ $(document).ready(function () {
 
         event.preventDefault();
         var id = $(this).attr("data-id")
-        console.log(id)
+        console.log("id: " + id)
         //console.log(JSON.stringify("HEYYYOYOYO"));
         //console.log($(this).parent());
 
@@ -162,6 +162,9 @@ $(document).ready(function () {
 
                 // Pop open the modal dialog
                 $('#modal2').modal('open');
+                // userInput.zip.val("");
+                // userInput.name.val("");
+                // userInput.email.val("");
             });
     });
 
