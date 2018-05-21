@@ -2,6 +2,10 @@ $(document).ready(function () {
     $('.timepicker').timepicker({
         twelveHour: false, // Use AM/PM or 24-hour format
     });
+    $('.parallax').parallax();
+     
+
+
     $('.carousel').carousel();
     
     $('.datepicker').datepicker({
