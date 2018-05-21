@@ -133,7 +133,8 @@ h2 {
 /* margin-top: 5px; */
 }
 .parallax-container {
-    height: 500px;
+    height: 200px;
+    margin-top: 45px;
 }
 .center-text {
 text-align: center;
