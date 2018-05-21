@@ -10,6 +10,12 @@ html {
 h2 {
     font-size: 3rem;
 }
+.description{
+    width: 100%;
+    text-align: center;
+    /* line-height: inherit; */
+
+}
 .who{
 background-image: url("./images/stripes.png");
 width: 100%;
@@ -18,7 +24,7 @@ width: 100%;
     margin-top: 30px
 }
 
- .icon-block {
+.icon-block {
     /* padding: 0 20px; */
     display: inline-block;
     line-height: 1.2;
@@ -29,10 +35,18 @@ width: 100%;
     font-size: inherit;
    
   }
- .button { 
+.button { 
     background-color: #FAE1DF;
     color:#5C415D;
-} */
+    /* z-index: -1; */
+    
+} 
+
+button:hover {
+    background-color:#5C415D !important;
+    color: #FAE1DF;
+}
+
 .card { width:800px;
     background-color: rgb(244, 239, 239);
 }
@@ -99,9 +113,9 @@ header,nav {
     background-color: #5C415D;
 }
 
-main {
+/* main {
     flex: 1 0 auto;
-}
+} */
 
 main h1 {
     font-weight: bold;
@@ -127,7 +141,7 @@ margin-left: 30px;
     margin-bottom: 1%;
  }
 
- .dropdown-trigger {
+ /* .dropdown-trigger {
     width: 30% !important;
     display:inline-block;
     margin-left: 0 auto;
@@ -135,7 +149,7 @@ margin-left: 30px;
     position: relative;
     margin-top: 1%;
     margin-bottom: 1%;
- }
+ } */
 
  #sidebar {
     float: left;
@@ -160,16 +174,17 @@ margin-left: 30px;
 }
  
 #submit {
-    width: 20% !important;
+    /* width: 20% !important;
     display: block;
      margin-left: 0;
      margin-right:  auto;
      margin-top: 1%;
-     margin-bottom: 1%; 
+     margin-bottom: 1%;  */
+     /* z-index: -1; */
  } 
 
 #logo-icon {
-   margin-left: 50px;
+  margin-left: 50px;
   margin-bottom: 2px;
 }
 
@@ -183,14 +198,18 @@ margin-left: 30px;
 #head-nav-links {
     margin-right: 50px;
 }
-.one{
-   margin-top: 150px;
-   margin-bottom: 20px;
 
+.one{
+   margin-top: 150px !important;
+    background-color:white !important;
+   
 }
+
 .divider{
-    margin-bottom: 20px;
-    margin-top: 20px; 
+    margin-bottom: 1%;
+    margin-top: 1%; 
+    background-color: #CAE7B9;
+    /* background-color:white; */
 }
 
 .mainpanel{
@@ -199,7 +218,6 @@ margin-left: 30px;
 .fly-in-text{
     font-family: 'Dancing Script', cursive;
     color:black;
-
 }
 
 #mainpanel-content {
