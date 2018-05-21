@@ -3,7 +3,9 @@ $(document).ready(function () {
         twelveHour: false, // Use AM/PM or 24-hour format
     });
 
-
+   
+    $('.parallax').parallax();
+     
 
     $('.carousel').carousel();
 
