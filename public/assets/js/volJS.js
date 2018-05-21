@@ -2,24 +2,17 @@ $(document).ready(function () {
     $('.timepicker').timepicker({
         twelveHour: false, // Use AM/PM or 24-hour format
     });
-
-
-
     $('.carousel').carousel();
-
-
+    
     $('.datepicker').datepicker({
         format: 'yyyy-mm-dd'
     });
 
     var picker = $('.datepicker').val();
     //console.log(picker)
-
-
     function getdate() {
         var picker = $('.datepicker').val();
         console.log(picker)
-
     }
 
     var welcomeSection = $(' .welcome-section');
@@ -67,9 +60,6 @@ $(document).ready(function () {
                 //console.log("match")
             }
         }
-
-
-
     });
 
 
@@ -78,17 +68,20 @@ $(document).ready(function () {
         $('#myselect').material_select();
     });
 
-
     //Activate submit button
     $('#submitButton').on('click', function (event) {
         event.preventDefault();
         //console.log(JSON.stringify("hi or whatever"));
-
+        var validate = $('#userName').val().trim();//.trim() of undefined !!!
+        var validate2 = $('.webAddress').val().trim();
+        var validate3 = $('.activity').val().trim();
+        var validate4 = $('#volunteerdate').val();
+        var validate5 = $('#volunteertime').val();
         // Gather user inputs
         var userInput = {
-            name: $('#userName').val(),//.trim() of undefined !!!
-            web: $('.webAddress').val(),
-            activity: $('.activity').val(),
+            name: $('#userName').val().trim(),//.trim() of undefined !!!
+            web: $('.webAddress').val().trim(),
+            activity: $('.activity').val().trim(),
             date: $('#volunteerdate').val(),
             time: $('#volunteertime').val() + ":00",
             vol: $('.volNeeded').val(),
@@ -97,6 +90,27 @@ $(document).ready(function () {
         };
         console.log(JSON.stringify(userInput));
         // Add user inputs to orgs table
+
+        if(validate === '' ){
+            $('#error-message').text("Please Enter the name of your organization");
+            return;
+        }
+        if(validate2 === '') {
+            $('#error-message').text("Please Enter the url of your organization");
+            return;
+        }
+        if(validate3 === '' ){
+            $('#error-message').text("Please Enter the type of activities your organization is involved with");
+            return;
+        }
+        if(validate4 === '' ){
+            $('#error-message').text("Please Enter the date of your organization's event");
+            return;
+        }
+        if(validate5 === '' ){
+            $('#error-message').text("Please Enter the time of your organization's event");
+            return;
+        }
 
         $.post('/api/orgs', userInput)
             .done(function (data) {
@@ -109,7 +123,6 @@ $(document).ready(function () {
 
                 $('#modal1').modal('open');
             });
-
     });
 
     //Activate submit button
@@ -141,10 +154,7 @@ $(document).ready(function () {
                 // Pop open the modal dialog
                 $('#modal2').modal('open');
             });
-
     });
-
-
 
     $('.modal').modal();
     $('.dropdown-trigger').dropdown();
