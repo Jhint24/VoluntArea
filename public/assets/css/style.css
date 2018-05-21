@@ -39,8 +39,7 @@ width: 100%;
 .button { 
     background-color: #FAE1DF;
     color:#5C415D;
-    /* z-index: -1; */
-    
+    /* z-index: -1; */    
 } 
 
 button:hover {
@@ -48,12 +47,21 @@ button:hover {
     color: #FAE1DF;
 }
 
-.card { width:800px;
+.card-content{
+    background-image: url("./images/volunteer1.png");
+    /* opacity: 0.5; */    
+}
+
+.card { 
+    width:800px;
     background-color: rgb(244, 239, 239);
 }
 
-
-
+.card-image {
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 20px;    
+}
 
 @media only screen
 and (max-width : 480px) {
@@ -66,11 +74,8 @@ and (max-width : 767px) {
 .card { width:700px !important;}
 }
 
-.card-image {
-    padding: 10px;
-    padding-bottom: 20px;
-    margin: 20px;
-}
+
+
 .carousel .carousel-item {
     width: 800px !important;
     height: 300px;
@@ -129,7 +134,7 @@ h2 {
 /* margin-top: 5px; */
 }
 .parallax-container {
-    height: 500px;
+    height: 450px;
 }
 .center-text {
 text-align: center;
@@ -168,7 +173,7 @@ margin-left: 30px;
     margin-bottom: 1%;
  } */
 
- #sidebar {
+#sidebar {
     float: left;
     width: 30%;
 }
