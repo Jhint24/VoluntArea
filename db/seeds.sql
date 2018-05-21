@@ -1,11 +1,11 @@
 INSERT INTO vols (vol_name, vol_email, vol_zip) 
-VALUES('Sally Smith', 'sally@yahoo.com', 'Gilbert');
+VALUES('Sally Smith', 'sally@yahoo.com', '85295');
 
 INSERT INTO vols (vol_name, vol_email, vol_zip) 
-VALUES('Joe Johnson', 'joe@aol.com', 'Mesa');
+VALUES('Joe Johnson', 'joe@aol.com', '85032');
 
 INSERT INTO vols (vol_name, vol_email, vol_zip) 
-VALUES('Pete Peterson', 'pete@hotmail.com', 'Tempe');
+VALUES('Pete Peterson', 'pete@hotmail.com', '85029');
 
 INSERT INTO orgs (org_name, org_activity, org_url, org_date, org_time, org_hours, org_vols) 
 VALUES('St. Mary\'s Foodbank', 'Food Banking', 'www.firstfoodbank.org', '2018-05-25', '0800', 8, 100);
