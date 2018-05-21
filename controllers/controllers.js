@@ -11,7 +11,7 @@ var voluntareaModel = require("../models/voluntarea.js");
       //A default, catch-all route that leads to home.html
   router.get("/", function(req, res) {
     var hbsObject1 = {
-        title: "Home"
+        title: "index"
     }
     res.render("index", hbsObject1);
   });
@@ -104,6 +104,14 @@ router.post("/api/orgs", function(req, res) {
      });
      res.send("it worked");
    });
+
+
+   router.get("*", function(req, res) {
+    var hbsObject1 = {
+        title: "404"
+    }
+    res.render("404", hbsObject1);
+  });
 
 var app = express();
 

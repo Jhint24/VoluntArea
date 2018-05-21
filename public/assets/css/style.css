@@ -82,6 +82,10 @@ and (max-width : 767px) {
     z-index: -1;
 }
 
+.carousel-div   {
+    max-height: 350px;
+}
+
 /* .invisible-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -134,7 +138,10 @@ h2 {
 /* margin-top: 5px; */
 }
 .parallax-container {
-    height: 450px;
+
+    height: 200px;
+    margin-top: 45px;
+
 }
 .center-text {
 text-align: center;
