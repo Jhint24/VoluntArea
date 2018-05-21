@@ -51,23 +51,24 @@
         <!-- HTML Form -->
         <div class="container-fluid">
           <div class="row">
+                            <h3 id="error-message" style="text-align:center; font-size:15px; font-weight:bold; color:red"></h3>
 
             <div class="col s2">
-              <input type="text" class="form-control col s6" placeholder="Zip Code" id="zipCode{{this.id}}" type="text" class="validate">
+              <input type="text" class="form-control col s6 zipCode" placeholder="Zip Code" id="zipCode{{this.id}}" type="text" class="validate">
             </div>
 
             <div class="col s4">
-              <input type="text" class="form-control col s6" placeholder="First Name" id="userName2{{this.id}}" type="text" class="validate">
+              <input type="text" class="form-control col s6 userName2" placeholder="First Name" id="userName2{{this.id}}" type="text" class="validate">
             </div>
 
             <div class="col s6">
-              <input type="text" class="form-control col s6" placeholder="Email" id="emailAddress{{this.id}}" type="text" class="validate">
+              <input type="text" class="form-control col s6 emailAddress" placeholder="Email" id="emailAddress{{this.id}}" type="text" class="validate">
             </div>
 
           </div>
         </div>
 
-        <button class="btn waves-effect waves-light submitButton" data-id={{this.id}} id="submitButton2" type="submit" name="action">Submit
+        <button class="btn waves-effect waves-light submitButton2" data-id={{this.id}} id="submitButton2" type="submit" name="action">Submit
           <i class="material-icons right">send</i>
         </button>
 

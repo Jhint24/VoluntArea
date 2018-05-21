@@ -135,23 +135,38 @@ $(document).ready(function () {
     });
 
     //Activate submit button
-    $('.submitButton').on('click', function (event) {
+    $('.submitButton2').on('click', function (event) {
 
         event.preventDefault();
         var id = $(this).attr("data-id")
         console.log(id)
         //console.log(JSON.stringify("HEYYYOYOYO"));
         //console.log($(this).parent());
+        var validate6 = $('.zipCode').val();//.trim() of undefined !!!
+        var validate7 = $('.userName2').val();
+        var validate8 = $('.emailAddress').val();
 
         // Gather user inputs
         var userInput = {
-            zip: $('#zipCode' + id).val(),//.trim() of undefined !!!
-            name: $('#userName2' + id).val(),
-            email: $('#emailAddress' + id).val(),
+            zip: $('.zipCode' + id).val(),//.trim() of undefined !!!
+            name: $('.userName2' + id).val(),
+            email: $('.emailAddress' + id).val(),
 
         };
         console.log(JSON.stringify(userInput));
         // Add user inputs to orgs table
+        if(validate6 === '' ){
+            $('#error-message').text("Please Enter your zip Code");
+            return;
+        }
+        if(validate7 === '') {
+            $('#error-message').text("Please Enter your name");
+            return;
+        }
+        if(validate8 === '' ){
+            $('#error-message').text("Please Enter your email address");
+            return;
+        }
 
         $.post('/api/vols', userInput)
             .done(function (data) {
@@ -162,6 +177,10 @@ $(document).ready(function () {
 
                 // Pop open the modal dialog
                 $('#modal2').modal('open');
+                $('.zipCode').val("");
+                $('.userName2').val("");
+                $('.emailAddress').val("");
+                
             });
     });
 
