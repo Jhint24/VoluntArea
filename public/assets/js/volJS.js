@@ -126,6 +126,11 @@ $(document).ready(function () {
                 // https://stackoverflow.com/questions/29764242/how-to-detect-materialized-js-modal-closing-event
 
                 $('#modal1').modal('open');
+                $('#userName').val("");
+                $('.webAddress').val("");
+                $('.activity').val("");
+                $('#volunteerdate').val("");
+                $('#volunteertime').val("");
             });
     });
 
