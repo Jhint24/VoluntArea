@@ -5,7 +5,7 @@ An app that connects nonprofit organizations with potential volunteers. Organiza
 
 
 
-## Deployemnt
+## Deployment
 Visit the application [https://voluntarea.herokuapp.com/](https://voluntarea.herokuapp.com/)
 
 
