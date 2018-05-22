@@ -3,6 +3,16 @@ noun  vol·un·tar·ea  \ ˌvä-lən-ˈter-ē-ə\
 
 An app that connects nonprofit organizations with potential volunteers. Organizations will post their volunteer needs for events on specific dates.  
 
+“I would totally use this app. Finding volunteer work can be surprisingly difficult!” 
+~ Nicki, Kubra
+
+“Number one app in the industry!  VoluntArea will revolutionize the non-profit industry!”
+~ Abby, Derby Dames
+
+“I can’t imagine any team coming up with a better app than this!  Incredible!”
+~ Deron, Intel
+
+
 
 
 ## Deployment
