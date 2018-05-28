@@ -30,7 +30,7 @@ $(document).ready(function () {
     $("#getDate").click(function () {
         //variable to get date selection value
         var date = $('.datepicker').val();
-        console.log(date)
+        //console.log(date)
         var result = [""];
 
         //function to loop through date values of stored events
@@ -43,10 +43,9 @@ $(document).ready(function () {
             if (i % 10 == 0) {
                 p = 0
                 final[j] = temp.join("")
-                console.log(final[j])
+                //console.log(final[j])
                 //console.log(j)
                 j = j + 1
-
             }
             temp[p] = result[i]
             p = p + 1
@@ -56,11 +55,14 @@ $(document).ready(function () {
         for (var i = 0; i < final.length; i++) {
             //console.log($(".card").find("[data-myVal]"));
             if (String(date) != String(final[i])) {
-                $('#cardDiv' + (i)).hide();
-
+               var id = $('[data-cardid="' + i );
+               console.log('[data-cardid="' + i + '"]')
+               id.hide()
             }
             else {
-                $('#cardDiv' + (i)).show();
+                var id = $('[data-cardid="' + i);
+                id.show()
+                //$('#cardDiv' + (i)).show();
                 //console.log("match")
             }
         }
