@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "connects nonprofit organizations with potential volunteers",
   "dependencies": {
-
+    "bcrypt": "^2.0.1",
     "body-parser": "1.18.3",
     "dotenv": "5.0.1",
     "express": "4.16.3",
